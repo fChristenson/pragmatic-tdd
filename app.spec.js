@@ -27,6 +27,9 @@ describe("TDD", () => {
     expect(global.console.foo).toEqual(1);
   });
 
+  // Without a type system we would have to test that every method
+  // is present on our class and that each of them behave the same with
+  // any amount of parameters.
   it("doesn't test anything meaningful", async () => {
     const mock = jest.fn(() => Promise.resolve([]));
     const userService = new UserService();
