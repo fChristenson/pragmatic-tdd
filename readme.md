@@ -13,4 +13,7 @@ However as with everything there are some who go too far.
 
 TDD is not a religion but some developer act as if there is a holy book of rules to follow.
 
-In the real world there are methods of development that are better handled by other means than TDD.
+In the real world it is not always practical to use TDD.
+
+The goal of any testing strategy is to give confidence that the code works at all times.
+TDD is one way to help with that confidence but there are other methods as well.
