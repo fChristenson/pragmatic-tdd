@@ -50,7 +50,14 @@ describe("TDD", () => {
     });
     const UserModel = mongoose.model("User", UserSchema);
     const user = await new UserModel().save();
+    const now = new Date();
+    const user2 = await new UserModel({ createdAt: now }).save();
+    // How will we check if the default date really is correct?
+    // What if the passed in date is correct but the defaut is broken inside mongoose?
+    // What if other features are broken? Should we test all of mongoose in our code?
     expect(typeof user.createdAt).toEqual("object");
+    expect(typeof user2.createdAt).toEqual("object");
+    expect(user2.createdAt.toISOString()).toEqual(now.toISOString());
   });
 });
 
