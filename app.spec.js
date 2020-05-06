@@ -54,6 +54,8 @@ describe("TDD", () => {
   });
 });
 
+// if we where using Typescript we may not need a test for this function
+// It would be cheap to make tests so we should even with Typescript shouldn't we?
 const add = (a, b) => {
   return a + b;
 };
