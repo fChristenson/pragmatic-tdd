@@ -12,10 +12,12 @@ describe("TDD", () => {
     mongoose.connection.close(done);
   });
 
+  // Standard unit test
   it("should return 2", () => {
     expect(add(1, 1)).toEqual(2);
   });
 
+  // problematic code
   it("should log hello world", () => {
     const spy = jest.fn();
     global.console = { log: spy, foo: 1 };
